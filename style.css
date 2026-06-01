@@ -1,0 +1,35 @@
+
+
+h1 {
+    margin: 1;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    padding: 20px;
+}
+
+/* Esto alinea la foto y el texto en la misma línea */
+.encabezado-portafolio {
+    background-color: #9ad9e4;
+    color: white;
+    padding: 20px;
+    text-align: left; /* Cambiamos a la izquierda para que se vea mejor */
+    display: flex;    /* ¡Esta es la magia! Activa un modo que pone las cosas de lado */
+    align-items: center; /* Centra la foto y el texto verticalmente */
+    gap: 20px;        /* Deja un espacio de separación entre la foto y tu nombre */
+}
+
+/* Esto controla el tamaño de tu foto para que no ocupe toda la pantalla */
+.foto-perfil {
+    width: 120px;       /* Ancho de la foto */
+    height: 120px;      /* Alto de la foto */
+    border-radius: 50%; /* ¡Esto corta la foto en forma de círculo perfecto! */
+    object-fit: cover;  /* Evita que la foto se estire o se deforme */
+    border: 3px solid white; /* Le da un borde blanco elegante */
+}
+
+h1 {
+    margin: 0;
+}
