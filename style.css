@@ -1,35 +1,111 @@
 
-
-h1 {
-    margin: 1;
+/* Variables de colores para mantener un diseño limpio y tecnológico */
+:root {
+    --color-fondo: #f0f2f5;
+    --color-primario: #1a252f;
+    --color-secundario: #34495e;
+    --color-tarjeta: #ffffff;
+    --color-texto: #2c3e50;
+    --color-destacado: #3498db;
 }
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
-    color: #333;
-    padding: 20px;
-}
-
-/* Esto alinea la foto y el texto en la misma línea */
-.encabezado-portafolio {
-    background-color: #9ad9e4;
-    color: white;
-    padding: 20px;
-    text-align: left; /* Cambiamos a la izquierda para que se vea mejor */
-    display: flex;    /* ¡Esta es la magia! Activa un modo que pone las cosas de lado */
-    align-items: center; /* Centra la foto y el texto verticalmente */
-    gap: 20px;        /* Deja un espacio de separación entre la foto y tu nombre */
-}
-
-/* Esto controla el tamaño de tu foto para que no ocupe toda la pantalla */
-.foto-perfil {
-    width: 120px;       /* Ancho de la foto */
-    height: 120px;      /* Alto de la foto */
-    border-radius: 50%; /* ¡Esto corta la foto en forma de círculo perfecto! */
-    object-fit: cover;  /* Evita que la foto se estire o se deforme */
-    border: 3px solid white; /* Le da un borde blanco elegante */
-}
-
-h1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
     margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Encabezado con Flexbox */
+.encabezado-portafolio {
+    background: linear-gradient(135deg, var(--color-primario), var(--color-secundario));
+    color: white;
+    padding: 40px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.foto-perfil {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.texto-header h1 {
+    margin: 0;
+    font-size: 2.2rem;
+    letter-spacing: 0.5px;
+}
+
+.subtitulo {
+    margin: 5px 0 0 0;
+    font-size: 1.2rem;
+    opacity: 0.9;
+    font-weight: 300;
+}
+
+/* Contenedor central ordenado */
+.contenedor {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* Estilo Didáctico: Tarjetas visuales */
+.tarjeta-seccion {
+    background-color: var(--color-tarjeta);
+    padding: 30px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    border-left: 5px solid var(--color-secundario);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta-seccion h2 {
+    margin-top: 0;
+    color: var(--color-primario);
+    font-size: 1.5rem;
+}
+
+/* Cuadrícula interactiva para la IA (Pone las secciones lado a lado) */
+.cuadrícula-ia {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 25px;
+}
+
+/* Efecto interactivo al pasar el mouse por encima */
+.interactiva {
+    border-left: 5px solid var(--color-destacado);
+    cursor: pointer;
+}
+
+.interactiva:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.destacado {
+    color: var(--color-destacado);
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Pie de página */
+.pie-pagina {
+    text-align: center;
+    padding: 30px;
+    background-color: var(--color-primario);
+    color: white;
+    margin-top: 5px;
 }
